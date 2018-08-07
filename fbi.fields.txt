@@ -1,0 +1,411 @@
+album	can_upload	bool	Whether the viewer can upload photos to this album
+album	count	unsigned int32	Number of photos in this album
+album	cover_photo	numeric string	Album cover photo id
+album	created_time	datetime	The time the album was initially created
+album	description	string	The description of the album
+album	from	user|page	The profile that created the album
+album	id	numeric string	The album ID
+album	link	token with structure: uritokentype	A link to this album on Facebook
+album	location	string	The textual location of the album
+album	name	string	The title of the album
+album	place		The place associated with this album
+album	privacy	string	The privacy settings for the album
+album	type	string	The type of the album: profile, mobile, wall, normal or album
+album	updated_time	datetime	The last time the album was updated
+application	android_key_hash	list<string>	Android key hash of the app
+application	app_domains	list<string>	Domains and subdomains this app can use
+application	app_name	string	Name of the app
+application	app_type	unsigned int32	Type of the app
+application	auth_dialog_data_help_url	string	The URL of a special landing page that helps users of an app begin publishing Open Graph activity.
+application	auth_dialog_headline	string	One line description of an app that appears in the Auth Dialog
+application	auth_dialog_perms_explanation	string	The text to explain why an app needs additional permissions that appears in the Auth Dialog
+application	auth_referral_default_activity_privacy	string	The default privacy setting selected for Open Graph activities in the Auth Dialog
+application	auth_referral_enabled	unsigned int32	Indicates whether Authenticated Referrals are enabled
+application	auth_referral_extended_perms	list<string>	Extended permissions that a user can choose to grant when Authenticated Referrals are enabled
+application	auth_referral_friend_perms	list<string>	Basic friends permissions that a user must grant when Authenticated Referrals are enabled
+application	auth_referral_response_type	string	The format in which the app receives Auth tokens from the Auth Dialog
+application	auth_referral_user_perms	list<string>	Basic user permissions that a user must grant when Authenticated Referrals are enabled
+application	canvas_fluid_height	bool	Indicates whether the app uses fluid or settable height values for Canvas
+application	canvas_fluid_width	unsigned int32	Indicates whether the app uses fluid or fixed width values for Canvas
+application	canvas_url	string	The non-secure URL from which Canvas app content is loaded
+application	category	string	The category the Application can be found under
+application	client_config	map	Config data for the client
+application	company	string	The name of the company that built the application
+application	configured_ios_sso	bool	True if the app has configured Single Sign On on iOS
+application	contact_email	string	Email address listed for users to contact developers
+application	created_time	datetime	UNIX timestamp that indicates when the app was created
+application	creator_uid	id	User ID of the creator of this app
+application	daily_active_users	numeric string	The number of Facebook users who've used the Application in the last day
+application	daily_active_users_rank	unsigned int32	The rank of the daily_active_users metric compared with other applications
+application	deauth_callback_url	string	URL that is pinged whenever a user removes the app
+application	description	string	The description of the application, as provided by the developer
+application	gdpv4_enabled	bool	Indicates whether v4 login is enabled for this app.
+application	gdpv4_nux_content	string	localized content for the login nux
+application	gdpv4_nux_enabled	bool	Indicates whether the NUX for login button must be shown or not.
+application	hosting_url	string	Webspace created with one of our hosting partners for this app
+application	icon_url	string	The URL identifying the Application's icon image
+application	id	numeric string	The ID of the Application
+application	ios_bundle_id	list<string>	Bundle ID of the associated iOS app
+application	ipad_app_store_id	string	ID of the app in the iPad App Store
+application	iphone_app_store_id	string	ID of the app in the iPhone App Store
+application	link	string	Facebook profile link of the app
+application	logo_url	string	The URL identifying the Application's logo image
+application	migrations	map<string, bool>	Status of every valid migration for this app (true means enabled)
+application	mobile_profile_section_url	string	URL of the app section on a user's profile for the mobile site
+application	mobile_web_url	string	URL to which Mobile users will be directed when using the app
+application	monthly_active_users	numeric string	The number of Facebook users who've used the Application in the last 30 days
+application	monthly_active_users_rank	unsigned int32	The rank of the monthly_active_users metric compared with other applications
+application	namespace	string	The string appended to apps.facebook.com/ to navigate to the Application's canvas page
+application	name	string	The name of the Application
+application	object_store_urls	applicationobjectstoreurls	Mobile store URLs for the app
+application	page_tab_default_name	string	The title of the app when used in a Page Tab
+application	page_tab_url	string	The non-secure URL from which Page Tab app content is loaded
+application	privacy_policy_url	string	The URL that links to a Privacy Policy for the app
+application	profile_section_url	string	URL of the app section on a user's profile for the desktop site
+application	restrictions	applicationrestrictioninfo	Demographic restrictions for the app
+application	secure_canvas_url	string	The secure URL from which Canvas app content is loaded
+application	secure_page_tab_url	string	The secure URL from which Page Tab app content is loaded
+application	server_ip_whitelist	string	App requests must originate from this comma-separated list of IP addresses
+application	social_discovery	unsigned int32	Indicates whether app usage stories show up in the Ticker or News Feed
+application	subcategory	string	The subcategory the Application can be found under
+application	supports_apprequests_fast_app_switch	applicationfastappswitch	Indicates whether the app should do a fast-app-switch to the Facebook app to show the app requests dialog
+application	supports_attribution	bool	Indicates whether the app has not opted out of app install tracking
+application	supports_implicit_sdk_logging	bool	Indicates whether the app has not opted out of the mobile SDKs sending data on SDK interactions
+application	suppress_native_ios_gdp	bool	Whether to suppress the native iOS GDP
+application	terms_of_service_url	string	URL to Terms of Service which is linked to in Auth Dialog
+application	url_scheme_suffix	string	URL scheme suffix
+application	user_support_email	string	Main contact email for this app
+application	user_support_url	string	URL of support for users of an app shown in Canvas footer
+application	website_url	string	URL of a website that integrates with this app
+application	weekly_active_users	numeric string	The number of Facebook users who've used the Application in the last seven days
+comment	attachment		The link or photo attached to the comment - if both a link and a photo are present, the photo will be preferred and the link will be present in the text part of this comment. generic `access_token`. object containing [various descriptive fields (see FQL reference for equivalent field for more info](/docs/reference/fql/comment/).
+comment	can_comment		Specifies whether you can [reply to this comment](/docs/graphapi/guides/comments/#replying). generic `access_token`. `boolean`.
+comment	comment_count		The number of replies to this comment, if any. generic `access_token`. `integer`.
+comment	created_time		The timedate the comment was created. generic `access_token`. `string` containing ISO-8601 date-time
+comment	from		The user that created the comment. generic `access_token`. object containing the `id` and `name` of the creating user
+comment	id		The Facebook ID of the comment. generic `access_token`. `string`
+comment	like_count		The number of times this comment was liked. generic `access_token`. `integer`
+comment	message		The comment text. generic `access_token`. `string`
+comment	parent		If this comment is a reply, this field returns the parent comment, otherwise no value. generic `access_token`. `reference`
+comment	user_likes		This field is returned only if the authenticated user likes this comment. generic `access_token`. `string`; always `true`
+event	cover	coverphoto	Cover picture
+event	description	string	Long-form description
+event	end_time	string	End time, if one has been set
+event	feed_targeting	targeting	News feed targeting data
+event	id	numeric string	The event ID
+event	is_date_only	bool	Whether the event only has a date specified, but no time
+event	location	string	Event location
+event	name	string	Event name
+event	owner		The profile that created the event
+event	parent_group	group	The group the event belongs to
+event	privacy	string	Who can see the event
+event	start_time	string	Start time
+event	ticket_uri	string	The link users can visit to buy a ticket to this event
+event	timezone	string	Timezone
+event	updated_time	datetime	Last update time
+event	venue	location	Venue hosting the event
+group	cover		The URL for the group's cover photo.   generic `access_token`, `user_groups`, or `friends_groups`.  `array` containing a valid URL, cover_id and image offset.
+group	description		A brief description of the group.   generic `access_token`, `user_groups`, or `friends_groups`.  `string`.
+group	icon		The URL for the group's icon.   generic `access_token`, `user_groups`, or `friends_groups`.  `string` containing a valid URL.
+group	id		The group ID.  generic `access_token`, `user_groups`, or `friends_groups`. `string`.
+group	link		The URL for the group's website.   generic `access_token`, `user_groups`, or `friends_groups`.  `string` containing a valid URL.
+group	name		The name of the group.   generic `access_token`, `user_groups`, or `friends_groups`. `string`.
+group	owner		The profile that created this group.  generic `access_token`, `user_groups`, or `friends_groups`.  object containing the `id` and `name` fields
+group	privacy		The privacy setting of the group.   generic `access_token`, `user_groups`, or `friends_groups`.  `string` containing `OPEN`, `CLOSED`, or `SECRET`
+group	updated_time		The last time the group was updated.   generic `access_token`, `user_groups`, or `friends_groups`. `string` containing ISO-8601 date-time.
+link	caption	string	The caption
+link	created_time	datetime	The time the link was created
+link	description	string	A summary of the link, as taken from the site's description og meta tag
+link	from		The entity that shared this link
+link	icon	string	The icon representing this shared link
+link	id	numeric string	The shared link idenftifier
+link	link	string	The URL of the link
+link	message	string	The text the author posted alongside the link
+link	name	string	The title of the link, as taken from the site's title og meta tag
+link	picture	string	The URL to the thumbnail image that is displayed by default
+link	privacy	privacy	The privacy settings
+link	via		The unique identifier of the original link poster if this link was shared via another entity
+note	created_time	datetime	The time the note was initially published
+note	from	user|page	The profile that created the note
+note	icon	string	The icon that Facebook displays with notes
+note	id	numeric string	The note ID
+note	message	string	The content of the note
+note	subject	string	The title of the note
+note	updated_time	datetime	The time the note was last updated
+page	about	string	Information about the Page
+page	access_token	string	The access token you can use to act as the Page. Only viewable by a page admin
+page	affiliation	string	Affiliation of this person. Applicable to Pages representing People
+page	app_id	id	App ID for app-owned pages and app pages
+page	artists_we_like	string	Artists the band likes. Applicable to Bands
+page	attire	string	Dress code of the business. Applicable to Restaurants or Nightlife. Can be one of Casual, Dressy or Unspecified
+page	awards	string	The awards information of the film. Applicable to Films
+page	band_interests	string	Band interests. Applicable to Bands
+page	band_members	string	Members of the band. Applicable to Bands
+page	best_page	page	The best available Page on Facebook for the concept represented by this Page. The best available Page takes into account authenticity and fan count
+page	bio	string	Biography of the band. Applicable to Bands
+page	birthday	string	Birthday of this person. Applicable to Pages representing people
+page	booking_agent	string	Booking agent of the band. Applicable to Bands
+page	built	string	Built of the vehicle. Applicable to Vehicles
+page	business		The Business associated with this Page
+page	can_post	bool	Whether the current session user can post on this Page
+page	category_list	list<pagecategory>	The Page's categories
+page	category	string	The Page's category. e.g. Product/Service, Computers/Technology
+page	checkins	unsigned int32	Number of checkins at a place represented by a Page
+page	company_overview	string	The company overview. Applicable to Companies
+page	cover	coverphoto	Information about the page's cover photo
+page	culinary_team	string	Culinary team of the business. Applicable to Restaurants or Nightlife
+page	current_location	string	Current location of the Page
+page	description_html	string	The description of the Page in raw HTML
+page	description	string	The description of the Page
+page	directed_by	string	The director of the film. Applicable to Films
+page	emails	list<string>	The emails appearing on the about section of a Page. Only viewable by a page admin
+page	features	string	Features of the vehicle. Applicable to Vehicles
+page	food_styles	list<string>	The restaurant's food styles. Applicable to Restaurants
+page	founded	string	When the company is founded. Applicable to Companies
+page	general_info	string	General information provided by the Page
+page	general_manager	string	General manager of the business. Applicable to Restaurants or Nightlife
+page	genre	string	The genre of the film. Applicable to Films
+page	global_brand_page_name	string	The name of the Page with country codes appended for Global Brand Pages. Only viewable by the Page admin
+page	global_brand_parent_page	page	This brand's global (parent) Page
+page	global_brand_root_id	numeric string	This brand's global Root ID
+page	has_added_app	bool	Indicates whether this Page has added the app making the query in a Page tab
+page	hometown	string	Hometown of the band. Applicable to Bands
+page	hours	map<string, string>	Hours of operation. Applicable to Businesses and Places. The keys in the map are in the form of {day}_{number}_{status}, where {day} consits of the first 3 characters of the day of the week, {status} is equal to either "open" or "close", and {number} can be either 1 or 2, to allow two different hour ranges per day (e.g. mon_1_open). The format of each entry is HH:MM
+page	id	numeric string	The Page ID
+page	influences	string	Influences on the band. Applicable to Bands
+page	is_community_page	bool	Indicates whether the Page is a community Page
+page	is_permanently_closed	bool	Whether the business corresponding to this Page is permanently closed
+page	is_published	bool	Indicates whether the Page is published and visible to non-admins
+page	is_unclaimed	bool	Indicates whether the Page is unclaimed
+page	is_verified	bool	Pages with a large number of followers can be manually verified by Facebook as [having an authentic identity](https://www.facebook.com/help/196050490547892). This field indicates whether the page is verified by this process.
+page	likes	unsigned int32	The number of users who like the Page. For Global Brand Pages this is the count for all pages across the brand
+page	link	string	The Page's Facebook URL
+page	location	location	The location of this place. Applicable to all Places
+page	members	string	Members of this org. Applicable to Pages representing Team Orgs
+page	mission	string	The company mission. Applicable to Companies
+page	mpg	string	MPG of the vehicle. Applicable to Vehicles
+page	name	string	The name of the Page.
+page	network	string	The TV network for the TV show. Applicable to TV Shows
+page	new_like_count	unsigned int32	The number of people who have liked the Page, since the last login. Only viewable by a page admin
+page	offer_eligible	bool	Offer eligibility status. Only viewable by a page admin
+page	parent_page	page	Parent Page for this Page
+page	parking	pageparking	Parking information. Applicable to Businesses and Places
+page	payment_options	pagepaymentoptions	Payment options accepted by the business. Applicable to Restaurants or Nightlife
+page	personal_info	string	Personal information. Applicable to Pages representing People
+page	personal_interests	string	Personal interests. Applicable to Pages representing People
+page	pharma_safety_info	string	Pharmacy safety information. Applicable to Pharmaceutical companies
+page	phone	string	Phone number provided by a Page
+page	plot_outline	string	The plot outline of the film. Applicable to Films
+page	press_contact	string	Press contact information of the band. Applicable to Bands
+page	price_range	string	Price range of the business. Applicable to Restaurants or Nightlife. Can be one of \$ (0-10), \$\$ (10-30), \$\$\$ (30-50), \$\$\$\$ (50+) or Unspecified
+page	produced_by	string	The productor of the film. Applicable to Films
+page	products	string	The products of this company. Applicable to Companies
+page	promotion_eligible	bool	Boosted posts eligibility status. Only viewable by a page admin
+page	promotion_ineligible_reason	string	Reason, for which boosted posts are not eligible. Only viewable by a page admin
+page	public_transit	string	Public transit to the business. Applicable to Restaurants or Nightlife
+page	record_label	string	Record label of the band. Applicable to Bands
+page	release_date	string	The film's release data. Applicable to Films
+page	restaurant_services	pagerestaurantservices	Services the restaurant provides. Applicable to Restaurants
+page	restaurant_specialties	pagerestaurantspecialties	The restaurant's specialties. Applicable to Restaurants
+page	schedule	string	The air schedule of the TV show. Applicable to TV Shows
+page	screenplay_by	string	The screenwriter of the film. Applicable to Films
+page	season	string	The season information of the TV Show. Applicable to TV Shows
+page	starring	string	The cast of the film. Applicable to Films
+page	store_number	unsigned int32	Unique store number for this Location Page
+page	studio	string	The studio for the film production. Applicable to Films
+page	talking_about_count	unsigned int32	The number of people talking about this Page
+page	unread_message_count	unsigned int32	Unread message count for the Page. Only viewable by a page admin
+page	unread_notif_count	unsigned int32	Number of unread notifications. Only viewable by a page admin.
+page	unseen_message_count	unsigned int32	Unseen message count for the Page. Only viewable by a page admin
+page	username	string	The alias of the Page. For example, for www.facebook.com/platform the username is 'platform'
+page	website	string	The URL of the Page's website
+page	were_here_count	unsigned int32	The number of visits to this Page's location
+page	written_by	string	The writer of the TV show. Applicable to TV Shows
+photo	album	album	The album this photo is in
+photo	backdated_time	datetime	The time that the photos was taken
+photo	backdated_time_granularity	enum	How accurate the backdated time is. Can be one of: 'year', 'month', 'day', 'hour', 'min', 'none'
+photo	created_time	datetime	The time this photo was published
+photo	from	user|page	The profile (user or page) that uploaded this photo
+photo	height	unsigned int32	The height of this photo in pixels
+photo	icon	string	The icon that Facebook displays when photos are published to newsfeed
+photo	id	numeric string	The photo ID
+photo	images	list<platformimagesource>	The 4 different stored representations of the photo
+photo	link	string	A link to the photo on Facebook
+photo	name	string	The user provided caption given to this photo - do not include advertising in this field
+photo	name_tags	map<string, list<entityattextrange>>	An array containing an array of objects mentioned in the name field which contain the id, name, and type of each object as well as the offset and length which can be used to match it up with its corresponding string in the name field
+photo	page_story_id	string	ID of the page story this corresponds to if any
+photo	picture	string	Link to the 100px wide representation of this photo
+photo	place		Location associated with the photo, if any
+photo	source	string	Link to the image source of the photo
+photo	updated_time	datetime	The last time the photo or its caption was updated
+photo	width	unsigned int32	The width of this photo in pixels
+place	about	string	Information about the Page
+place	access_token	string	The access token you can use to act as the Page. Only viewable by a page admin
+place	affiliation	string	Affiliation of this person. Applicable to Pages representing People
+place	app_id	id	App ID for app-owned pages and app pages
+place	artists_we_like	string	Artists the band likes. Applicable to Bands
+place	attire	string	Dress code of the business. Applicable to Restaurants or Nightlife. Can be one of Casual, Dressy or Unspecified
+place	awards	string	The awards information of the film. Applicable to Films
+place	band_interests	string	Band interests. Applicable to Bands
+place	band_members	string	Members of the band. Applicable to Bands
+place	best_page	page	The best available Page on Facebook for the concept represented by this Page. The best available Page takes into account authenticity and fan count
+place	bio	string	Biography of the band. Applicable to Bands
+place	birthday	string	Birthday of this person. Applicable to Pages representing people
+place	booking_agent	string	Booking agent of the band. Applicable to Bands
+place	built	string	Built of the vehicle. Applicable to Vehicles
+place	business		The Business associated with this Page
+place	can_post	bool	Whether the current session user can post on this Page
+place	category_list	list<pagecategory>	The Page's categories
+place	category	string	The Page's category. e.g. Product/Service, Computers/Technology
+place	checkins	unsigned int32	Number of checkins at a place represented by a Page
+place	company_overview	string	The company overview. Applicable to Companies
+place	cover	coverphoto	Information about the page's cover photo
+place	culinary_team	string	Culinary team of the business. Applicable to Restaurants or Nightlife
+place	current_location	string	Current location of the Page
+place	description_html	string	The description of the Page in raw HTML
+place	description	string	The description of the Page
+place	directed_by	string	The director of the film. Applicable to Films
+place	emails	list<string>	The emails appearing on the about section of a Page. Only viewable by a page admin
+place	features	string	Features of the vehicle. Applicable to Vehicles
+place	food_styles	list<string>	The restaurant's food styles. Applicable to Restaurants
+place	founded	string	When the company is founded. Applicable to Companies
+place	general_info	string	General information provided by the Page
+place	general_manager	string	General manager of the business. Applicable to Restaurants or Nightlife
+place	genre	string	The genre of the film. Applicable to Films
+place	global_brand_page_name	string	The name of the Page with country codes appended for Global Brand Pages. Only viewable by the Page admin
+place	global_brand_parent_page	page	This brand's global (parent) Page
+place	global_brand_root_id	numeric string	This brand's global Root ID
+place	has_added_app	bool	Indicates whether this Page has added the app making the query in a Page tab
+place	hometown	string	Hometown of the band. Applicable to Bands
+place	hours	map<string, string>	Hours of operation. Applicable to Businesses and Places. The keys in the map are in the form of {day}_{number}_{status}, where {day} consits of the first 3 characters of the day of the week, {status} is equal to either "open" or "close", and {number} can be either 1 or 2, to allow two different hour ranges per day (e.g. mon_1_open). The format of each entry is HH:MM
+place	id	numeric string	The Page ID
+place	influences	string	Influences on the band. Applicable to Bands
+place	is_community_page	bool	Indicates whether the Page is a community Page
+place	is_permanently_closed	bool	Whether the business corresponding to this Page is permanently closed
+place	is_published	bool	Indicates whether the Page is published and visible to non-admins
+place	is_unclaimed	bool	Indicates whether the Page is unclaimed
+place	is_verified	bool	Pages with a large number of followers can be manually verified by Facebook as [having an authentic identity](https://www.facebook.com/help/196050490547892). This field indicates whether the page is verified by this process.
+place	likes	unsigned int32	The number of users who like the Page. For Global Brand Pages this is the count for all pages across the brand
+place	link	string	The Page's Facebook URL
+place	location	location	The location of this place. Applicable to all Places
+place	members	string	Members of this org. Applicable to Pages representing Team Orgs
+place	mission	string	The company mission. Applicable to Companies
+place	mpg	string	MPG of the vehicle. Applicable to Vehicles
+place	name	string	The name of the Page.
+place	network	string	The TV network for the TV show. Applicable to TV Shows
+place	new_like_count	unsigned int32	The number of people who have liked the Page, since the last login. Only viewable by a page admin
+place	offer_eligible	bool	Offer eligibility status. Only viewable by a page admin
+place	parent_page	page	Parent Page for this Page
+place	parking	pageparking	Parking information. Applicable to Businesses and Places
+place	payment_options	pagepaymentoptions	Payment options accepted by the business. Applicable to Restaurants or Nightlife
+place	personal_info	string	Personal information. Applicable to Pages representing People
+place	personal_interests	string	Personal interests. Applicable to Pages representing People
+place	pharma_safety_info	string	Pharmacy safety information. Applicable to Pharmaceutical companies
+place	phone	string	Phone number provided by a Page
+place	plot_outline	string	The plot outline of the film. Applicable to Films
+place	press_contact	string	Press contact information of the band. Applicable to Bands
+place	price_range	string	Price range of the business. Applicable to Restaurants or Nightlife. Can be one of \$ (0-10), \$\$ (10-30), \$\$\$ (30-50), \$\$\$\$ (50+) or Unspecified
+place	produced_by	string	The productor of the film. Applicable to Films
+place	products	string	The products of this company. Applicable to Companies
+place	promotion_eligible	bool	Boosted posts eligibility status. Only viewable by a page admin
+place	promotion_ineligible_reason	string	Reason, for which boosted posts are not eligible. Only viewable by a page admin
+place	public_transit	string	Public transit to the business. Applicable to Restaurants or Nightlife
+place	record_label	string	Record label of the band. Applicable to Bands
+place	release_date	string	The film's release data. Applicable to Films
+place	restaurant_services	pagerestaurantservices	Services the restaurant provides. Applicable to Restaurants
+place	restaurant_specialties	pagerestaurantspecialties	The restaurant's specialties. Applicable to Restaurants
+place	schedule	string	The air schedule of the TV show. Applicable to TV Shows
+place	screenplay_by	string	The screenwriter of the film. Applicable to Films
+place	season	string	The season information of the TV Show. Applicable to TV Shows
+place	starring	string	The cast of the film. Applicable to Films
+place	store_number	unsigned int32	Unique store number for this Location Page
+place	studio	string	The studio for the film production. Applicable to Films
+place	talking_about_count	unsigned int32	The number of people talking about this Page
+place	unread_message_count	unsigned int32	Unread message count for the Page. Only viewable by a page admin
+place	unread_notif_count	unsigned int32	Number of unread notifications. Only viewable by a page admin.
+place	unseen_message_count	unsigned int32	Unseen message count for the Page. Only viewable by a page admin
+place	username	string	The alias of the Page. For example, for www.facebook.com/platform the username is 'platform'
+place	website	string	The URL of the Page's website
+place	were_here_count	unsigned int32	The number of visits to this Page's location
+place	written_by	string	The writer of the TV show. Applicable to TV Shows
+question	created_time		Time when question was created. `user_questions` or `friends_questions`. `string` containing ISO-8601 datetime
+question	from		User who asked the question. `user_questions` or `friends_questions`. Object containing `id` and `name` fields
+question	id		Question ID. `user_questions` or `friends_questions`. `string`
+question_option	created_time		Time when option was created. `user_questions` or `friends_questions`. `string` containing ISO-8601 datetime
+question_option	from		User who asked the question. `user_questions` or `friends_questions`. Object containing `id` and `name` fields
+question_option	id		QuestionOption ID. `user_questions` or `friends_questions`. `string`
+question_option	name		Text name of the option. `user_questions` or `friends_questions`. `string`
+question_option	object		Optional page associated with this option. `user_questions` or `friends_questions`. object containing `name`, `category`, and `id` of a [Page](/docs/reference/api/page/) associated with this option
+question	options		The list of options available as answers to the question. `user_questions` or `friends_questions`. Object containing `data[]` array of options, as described in the [options](#options) connection below
+question_option	vote_count		Number of votes this option has received. `user_questions` or `friends_questions`. `integer`
+question	question		Text of the question. `user_questions` or `friends_questions`. `string`
+question	updated_time		Time when question was last updated. `user_questions` or `friends_questions`. `string` containing ISO-8601 datetime
+status	from		The user who posted the message.Requires access_token.  object containing `id` and `name` fields.
+status	id		The status message ID.  Requires access_token. `string`. 
+status	message		The status message content. Requires access_token. `string`.
+status	place		Location associated with a Status, if any. Requires access_token. `object` containing `id` and `name` of Page associated with this location, and a `location` field containing geographic information such as `latitude`, `longitude`, `country`, and other fields (fields will vary based on geography and availability of information).
+status	type		The object type which is set to `status` - this is only returned when the object is part of an array, such as being requested from `/{user-id}/statuses`. Requires access_token. `string`.
+status	updated_time		The time the message was published. Requires access_token. `string` containing ISO-8601 date-time.
+user	about	string	About the user
+user	address	location	The user's address
+user	age_range	agerange	Age range
+user	bio	string	The user's bio
+user	birthday	string	The user's birthday
+user	cover	coverphoto	Cover Photo
+user	currency	currency	Currency
+user	devices	list<userdevice>	The users's devices
+user	education	list<educationexperience>	The user's education
+user	email	string	Email address
+user	favorite_athletes	list<experience>	The user's favorite athletes
+user	favorite_teams	list<experience>	The user's favorite teams
+user	first_name	string	The user's first name
+user	gender	string	The user's gender
+user	hometown	page	The user's hometown
+user	id	numeric string	The user id
+user	inspirational_people	list<experience>	The user's inspirational people
+user	installed	bool	Is the app installed?
+user	install_type	enum	Install type
+user	interested_in	list<string>	Genders the user is interested in
+user	is_verified	bool	People with large numbers of followers can have the authenticity of their identity [manually verified by Facebook](https://www.facebook.com/help/196050490547892). This field indicates whether the user profile is verified in this way.
+user	languages	list<experience>	The user's languages
+user	last_name	string	The user's last name
+user	link	string	A link to the user's Timeline
+user	locale	string	The user's locale
+user	location	page	The user's current location
+user	meeting_for	list<string>	What the user is interested in meeting for
+user	middle_name	string	The user's middle name
+user	name_format	string	The user's name formatted to correctly handle Chinese, Japanese, Korean ordering
+user	name	string	The user's full name
+user	payment_pricepoints	paymentpricepoints	The user's payment pricepoints
+user	political	string	The user's political views
+user	quotes	string	The user's favorite quotes
+user	relationship_status	string	The user's relationship status
+user	religion	string	The user's religion
+user	security_settings	securitysettings	Security settings
+user	significant_other	user	The user's significant other
+user	sports	list<experience>	The user's sports
+user	suggested_groups	list<messagingsuggestedgroup>	Suggested group threads
+user	test_group	unsigned int32	Platform test group
+user	third_party_id	string	A string containing an anonymous, but unique identifier for the user. You can use this identifier with third-parties
+user	timezone	float (min: -24) (max: 24)	Timezone
+user	updated_time	datetime	Updated time
+user	username	string	The user's username
+user	verified	bool	Indicates whether the user account has been verified. This is distinct from the `is_verified` field.
+user	video_upload_limits	videouploadlimits	Video upload limits
+user	viewer_can_send_gift	bool	Can the viewer send a gift to this user?
+user	website	string	The user's website
+user	work	list<workexperience>	The user's work
+video	created_time	datetime	The time the video was initially published
+video	description	string	The description of the video
+video	embed_html	string	The HTML element that may be embedded in a Web page to play the video
+video	format	list<videoformat>	The different formats of the video
+video	from		The profile (user or Page) that created the video
+video	icon	string	The icon that Facebook displays when videos are published to the feed
+video	id	numeric string	The video ID
+video	length	float	The length of this video
+video	name	string	The video title or caption
+video	picture	string	The URL for the thumbnail picture of the video
+video	source	string	A URL to the raw, playable video file
+video	status	enum	A string describing the status of a video, one of "ready" (uploaded, encoded, thumbnails extracted), "processing" (not ready yet) or "error" (processing failed)
+video	thumbnails	list<videothumbnail>	The default thumbnails for the video
+video	updated_time	datetime	The last time the video or its caption were updated
